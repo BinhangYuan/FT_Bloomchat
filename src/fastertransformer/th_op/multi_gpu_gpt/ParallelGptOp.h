@@ -416,7 +416,7 @@ public:
 
         if (bad_words_list_opt.has_value()) {
             CHECK_INPUT(bad_words_list_opt.value(), torch::kInt32);
-            input_tensors.insert({"bad_words_list", convert_tensor<int>(bad_words_list_opt.value())});
+            input_tensors.insert({"stop_words_list", convert_tensor<int>(bad_words_list_opt.value())});
         }
 
         bool return_context_cum_log_probs = false;
